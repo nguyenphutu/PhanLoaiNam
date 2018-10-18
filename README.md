@@ -1,4 +1,4 @@
-# PhanLoaiNam
+# Phân Loại Nấm
 - git clone
 # run requirments.txt
 - pip install -r requirments.txt
