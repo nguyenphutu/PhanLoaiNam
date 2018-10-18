@@ -1,0 +1,11 @@
+.checkbox-inline+.checkbox-inline, .radio-inline+.radio-inline {
+    margin-top: 0;
+    margin-left: 0;
+}
+.checkbox-inline, .radio-inline {
+    margin-right: 10px;
+}
+
+footer{
+    padding: 50px;
+}

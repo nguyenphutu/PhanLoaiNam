@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Ripple animation on  input type radio and Checkbox</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+</head> 
+<body>   
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>CHƯƠNG TRÌNH PHÂN LOẠI NẤM</h1>           
+            </div>
+            <div class="col-lg-12 main-content">
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="attribute">
+                                <h3>1. cap-shape</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="cap_shape">bell</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="cap_shape">conical</label>
+                                <label class="radio-inline"><input type="radio" value="3" name="cap_shape">convex</label>
+                                <label class="radio-inline"><input type="radio" value="4" name="cap_shape">knobbed</label>
+                                <label class="radio-inline"><input type="radio" value="5" name="cap_shape">sunken</label>
+                            </div>
+                            <div class="attribute">
+                                <h3 >2. cap-surface</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="cap_surface">fibrous</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="cap_surface">grooves</label>
+                                <label class="radio-inline"><input type="radio" value="3" name="cap_surface">scaly</label>
+                                <label class="radio-inline"><input type="radio" value="4" name="cap_surface">smooth</label>
+                            </div>
+                            <div class="attribute">
+                                <h3 >3. cap-color</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="cap_color">brown</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="cap_color">buff</label>
+                                <label class="radio-inline"><input type="radio" value="3" name="cap_color">cinnamon</label>
+                                <label class="radio-inline"><input type="radio" value="4" name="cap_color">gray</label>
+                                <label class="radio-inline"><input type="radio" value="5" name="cap_color">green</label>
+                                <label class="radio-inline"><input type="radio" value="6" name="cap_color">pink</label>
+                                <label class="radio-inline"><input type="radio" value="7" name="cap_color">purple</label>
+                                <label class="radio-inline"><input type="radio" value="8" name="cap_color">red</label>
+                                <label class="radio-inline"><input type="radio" value="9" name="cap_color">white</label>
+                                <label class="radio-inline"><input type="radio" value="10" name="cap_color">yellow</label>
+                            </div>   
+                            <div class="attribute">
+                                <h3>4. bruises?</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="bruises">bruises</label>
+                                <label class="radio-inline"><input type="radio" value="0" name="bruises">no</label>
+                            </div>
+                            <div class="attribute">
+                                <h3 >5. odor</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="odor">almond</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="odor">anise</label>
+                                <label class="radio-inline"><input type="radio" value="3" name="odor">fishy</label>
+                                <label class="radio-inline"><input type="radio" value="4" name="odor">foul</label>
+                                <label class="radio-inline"><input type="radio" value="5" name="odor">musty</label>
+                                <label class="radio-inline"><input type="radio" value="6" name="odor">none</label>
+                                <label class="radio-inline"><input type="radio" value="7" name="odor">pungent</label>
+                                <label class="radio-inline"><input type="radio" value="8" name="odor">spicy</label>
+                            </div>
+                            <div class="attribute">
+                                <h3 >6. gill-attachment</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="gill_attachment">attached</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="gill_attachment">descending</label>
+                                <label class="radio-inline"><input type="radio" value="3" name="gill_attachment">free</label>
+                                <label class="radio-inline"><input type="radio" value="4" name="gill_attachment">notched</label>
+                            </div>   
+                            <div class="attribute">
+                                <h3>7. gill-spacing</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="gill_spacing">close</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="gill_spacing">crowded</label>
+                                <label class="radio-inline"><input type="radio" value="3" name="gill_spacing">distant</label>
+                            </div>
+                            <div class="attribute">
+                                <h3 >8. gill-size</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="gill_size">broad</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="gill_size">narrow</label>
+                            </div>
+                        </div>   
+                        <div class="col-lg-4">                        
+                            <div class="attribute">
+                                <h3 >9. gill-color</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="gill_color">black</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="gill_color">brown</label>
+                                <label class="radio-inline"><input type="radio" value="3" name="gill_color">buff</label>
+                                <label class="radio-inline"><input type="radio" value="4" name="gill_color">chocolate</label>
+                                <label class="radio-inline"><input type="radio" value="5" name="gill_color">gray</label>
+                                <label class="radio-inline"><input type="radio" value="6" name="gill_color">green</label>
+                                <label class="radio-inline"><input type="radio" value="7" name="gill_color">orange</label>
+                                <label class="radio-inline"><input type="radio" value="8" name="gill_color">pink</label>
+                                <label class="radio-inline"><input type="radio" value="9" name="gill_color">purple</label>
+                                <label class="radio-inline"><input type="radio" value="10" name="gill_color">red</label>
+                                <label class="radio-inline"><input type="radio" value="11" name="gill_color">white</label>
+                                <label class="radio-inline"><input type="radio" value="12" name="gill_color">yellow</label>
+                            </div>   
+                            <div class="attribute">
+                                <h3 >10. stalk-shape</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="stalk_shape">enlarging</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="stalk_shape">tapering</label>
+                            </div> 
+                            <div class="attribute">
+                                <h3 >11. stalk-root</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="stalk_root">bulbous</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="stalk_root">club</label>
+                                <label class="radio-inline"><input type="radio" value="3" name="stalk_root">cup</label>
+                                <label class="radio-inline"><input type="radio" value="4" name="stalk_root">equal</label>
+                                <label class="radio-inline"><input type="radio" value="5" name="stalk_root">rhizomorphs</label>
+                                <label class="radio-inline"><input type="radio" value="6" name="stalk_root">rooted</label>
+                                <label class="radio-inline"><input type="radio" value="7" name="stalk_root">missing?</label>
+                            </div> 
+                            <div class="attribute">
+                                <h3>12. stalk-surface-above-ring</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="stalk_surface_above_ring">fibrous</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="stalk_surface_above_ring">scaly</label>
+                                <label class="radio-inline"><input type="radio" value="3" name="stalk_surface_above_ring">silky</label>
+                                <label class="radio-inline"><input type="radio" value="4" name="stalk_surface_above_ring">smooth</label>
+                            </div>
+                            <div class="attribute">
+                                <h3 >13. stalk-surface-below-ring</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="stalk_surface_below_ring">fibrous</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="stalk_surface_below_ring">scaly</label>
+                                <label class="radio-inline"><input type="radio" value="3" name="stalk_surface_below_ring">silky</label>
+                                <label class="radio-inline"><input type="radio" value="4" name="stalk_surface_below_ring">smooth</label>
+                            </div>
+                            <div class="attribute">
+                                <h3 >14. stalk-color-above-ring</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="stalk_color_above_ring">brown</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="stalk_color_above_ring">buff</label>
+                                <label class="radio-inline"><input type="radio" value="3" name="stalk_color_above_ring">cinnamon</label>
+                                <label class="radio-inline"><input type="radio" value="4" name="stalk_color_above_ring">gray</label>
+                                <label class="radio-inline"><input type="radio" value="5" name="stalk_color_above_ring">orange</label>
+                                <label class="radio-inline"><input type="radio" value="6" name="stalk_color_above_ring">pink</label>
+                                <label class="radio-inline"><input type="radio" value="7" name="stalk_color_above_ring">red</label>
+                                <label class="radio-inline"><input type="radio" value="8" name="stalk_color_above_ring">white</label>
+                                <label class="radio-inline"><input type="radio" value="9" name="stalk_color_above_ring">yellow</label>
+                            </div>  
+                            <div class="attribute">
+                                <h3 >15. stalk-color-below-ring</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="stalk_color_below_ring">brown</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="stalk_color_below_ring">buff</label>
+                                <label class="radio-inline"><input type="radio" value="3" name="stalk_color_below_ring">cinnamon</label>
+                                <label class="radio-inline"><input type="radio" value="4" name="stalk_color_below_ring">gray</label>
+                                <label class="radio-inline"><input type="radio" value="5" name="stalk_color_below_ring">orange</label>
+                                <label class="radio-inline"><input type="radio" value="6" name="stalk_color_below_ring">pink</label>
+                                <label class="radio-inline"><input type="radio" value="7" name="stalk_color_below_ring">red</label>
+                                <label class="radio-inline"><input type="radio" value="8" name="stalk_color_below_ring">white</label>
+                                <label class="radio-inline"><input type="radio" value="9" name="stalk_color_below_ring">yellow</label>
+                            </div>  
+                        </div>   
+                        <div class="col-lg-4"> 
+                            <div class="attribute">
+                                <h3 >16. veil-type</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="veil_type">partial</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="veil_type">universal</label>
+                            </div>   
+                            <div class="attribute">
+                                <h3 >17. veil-color</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="veil_color">brown</label>
+                                <label class="radio-inline"><input type="radio" value="5" name="veil_color">orange</label>
+                                <label class="radio-inline"><input type="radio" value="8" name="veil_color">white</label>
+                                <label class="radio-inline"><input type="radio" value="9" name="veil_color">yellow</label>
+                            </div> 
+                            <div class="attribute">
+                                <h3 >18. ring-number</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="ring-number">none</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="ring-number">one</label>
+                                <label class="radio-inline"><input type="radio" value="3" name="ring-number">two</label>
+                            </div> 
+                            <div class="attribute">
+                                <h3 >19. ring-type</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="ring-type">cobwebby</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="ring-type">evanescent</label>
+                                <label class="radio-inline"><input type="radio" value="3" name="ring-type">flaring</label>
+                                <label class="radio-inline"><input type="radio" value="4" name="ring-type">large</label>
+                                <label class="radio-inline"><input type="radio" value="5" name="ring-type">none</label>
+                                <label class="radio-inline"><input type="radio" value="6" name="ring-type">pendant</label>
+                                <label class="radio-inline"><input type="radio" value="7" name="ring-type">sheathing</label>
+                                <label class="radio-inline"><input type="radio" value="8" name="ring-type">zone</label>
+                            </div> 
+                            <div class="attribute">
+                                <h3 >20. spore-print-color</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="spore-print-color">black</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="spore-print-color">brown</label>
+                                <label class="radio-inline"><input type="radio" value="3" name="spore-print-color">buff</label>
+                                <label class="radio-inline"><input type="radio" value="4" name="spore-print-color">chocolate</label>
+                                <label class="radio-inline"><input type="radio" value="5" name="spore-print-color">green</label>
+                                <label class="radio-inline"><input type="radio" value="6" name="spore-print-color">orange</label>
+                                <label class="radio-inline"><input type="radio" value="7" name="spore-print-color">purple</label>
+                                <label class="radio-inline"><input type="radio" value="8" name="spore-print-color">white</label>
+                                <label class="radio-inline"><input type="radio" value="6" name="spore-print-color">yellow</label>                           
+                            </div> 
+                            <div class="attribute">
+                                <h3 >21. population</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="population">abundant</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="population">clustered</label>
+                                <label class="radio-inline"><input type="radio" value="3" name="population">numerous</label>
+                                <label class="radio-inline"><input type="radio" value="4" name="population">scattered</label>
+                                <label class="radio-inline"><input type="radio" value="5" name="population">several</label>
+                                <label class="radio-inline"><input type="radio" value="6" name="population">solitary</label>
+                            </div> 
+                            <div class="attribute">
+                                <h3 >22. habitat</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="habitat">grasses</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="habitat">leaves</label>
+                                <label class="radio-inline"><input type="radio" value="3" name="habitat">meadows</label>
+                                <label class="radio-inline"><input type="radio" value="4" name="habitat">paths</label>
+                                <label class="radio-inline"><input type="radio" value="5" name="habitat">urban</label>
+                                <label class="radio-inline"><input type="radio" value="6" name="habitat">waste</label>
+                                <label class="radio-inline"><input type="radio" value="7" name="habitat">woods</label>
+                            </div> 
+                        </div>                   
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center">
+        <p> Copyright@NPT 2018</p>
+    </footer>
+</body>
+</html>
