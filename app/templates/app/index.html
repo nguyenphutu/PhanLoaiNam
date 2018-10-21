@@ -219,7 +219,7 @@
                         </div>                   
                     </div>
                     <div class="text-center">
-                        <button class="btn btn-primary" id="submit">Submit</button>
+                        <span class="btn btn-primary" id="submit" onclick="check_input()">Submit</span>
                     </div>
                 </form>
             </div>
@@ -229,14 +229,14 @@
         <p> Copyright@NPT 2018</p>
     </footer>
     <script>
-        $('#submit').click(function() {
-            if ($('input:radio').is(':checked')) {
+        function check_input() {
+            if ($('#formdata input:radio:checked').length == 22){
                 $('#formdata').submit()
             } else {
                 alert('Please select all field!');
                 return false;
             }
-        });
+        };
     </script>
 </body>
 </html>
