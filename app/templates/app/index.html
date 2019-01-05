@@ -15,233 +15,233 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1>CHƯƠNG TRÌNH PHÂN LOẠI NẤM</h1>           
+                <h1>CHƯƠNG TRÌNH PHÂN LOẠI NẤM</h1>
             </div>
             <div class="col-lg-12 main-content">
                 <form id="formdata" action="" method="post">
                     {% csrf_token %}
                     <div class="row">
-                        <div class="col-lg-4">
+
+                        <div class="col-lg-6">
                             <div class="attribute">
-                                <h3>1. cap-shape</h3>
-                                <label class="radio-inline"><input type="radio" value="1" name="cap_shape">bell</label>
-                                <label class="radio-inline"><input type="radio" value="2" name="cap_shape">conical</label>
-                                <label class="radio-inline"><input type="radio" value="3" name="cap_shape">convex</label>
-                                <label class="radio-inline"><input type="radio" value="4" name="cap_shape">knobbed</label>
-                                <label class="radio-inline"><input type="radio" value="5" name="cap_shape">sunken</label>
+                                <h3>1. Hình mũ nấm có dạng? </h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="cap_shape">Hình chuông</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="cap_shape">Hình nón</label>
+                                <label class="radio-inline"><input type="radio" value="3" name="cap_shape">Hình lồi</label>
+                                <label class="radio-inline"><input type="radio" value="4" name="cap_shape">Hình núm</label>
+                                <label class="radio-inline"><input type="radio" value="5" name="cap_shape">Hình chìm</label>
                             </div>
                             <div class="attribute">
-                                <h3 >2. cap-surface</h3>
-                                <label class="radio-inline"><input type="radio" value="1" name="cap_surface">fibrous</label>
-                                <label class="radio-inline"><input type="radio" value="2" name="cap_surface">grooves</label>
-                                <label class="radio-inline"><input type="radio" value="3" name="cap_surface">scaly</label>
-                                <label class="radio-inline"><input type="radio" value="4" name="cap_surface">smooth</label>
+                                <h3 >2.	Nắp bề mặt nấm có dạng? </h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="cap_surface">Xơ</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="cap_surface">Có rãnh</label>
+                                <label class="radio-inline"><input type="radio" value="3" name="cap_surface">Có vảy</label>
+                                <label class="radio-inline"><input type="radio" value="4" name="cap_surface">Bóng</label>
                             </div>
                             <div class="attribute">
-                                <h3 >3. cap-color</h3>
-                                <label class="radio-inline"><input type="radio" value="1" name="cap_color">brown</label>
-                                <label class="radio-inline"><input type="radio" value="2" name="cap_color">buff</label>
-                                <label class="radio-inline"><input type="radio" value="3" name="cap_color">cinnamon</label>
-                                <label class="radio-inline"><input type="radio" value="4" name="cap_color">gray</label>
-                                <label class="radio-inline"><input type="radio" value="5" name="cap_color">green</label>
-                                <label class="radio-inline"><input type="radio" value="6" name="cap_color">pink</label>
-                                <label class="radio-inline"><input type="radio" value="7" name="cap_color">purple</label>
-                                <label class="radio-inline"><input type="radio" value="8" name="cap_color">red</label>
-                                <label class="radio-inline"><input type="radio" value="9" name="cap_color">white</label>
-                                <label class="radio-inline"><input type="radio" value="10" name="cap_color">yellow</label>
-                            </div>   
-                            <div class="attribute">
-                                <h3>4. bruises?</h3>
-                                <label class="radio-inline"><input type="radio" value="1" name="bruises">bruises</label>
-                                <label class="radio-inline"><input type="radio" value="0" name="bruises">no</label>
+                                <h3 >3.	Màu nắp có màu gì? </h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="cap_color">Màu nâu</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="cap_color">Màu cát cháy</label>
+                                <label class="radio-inline"><input type="radio" value="3" name="cap_color">Màu quế</label>
+                                <label class="radio-inline"><input type="radio" value="4" name="cap_color">Màu xám</label>
+                                <label class="radio-inline"><input type="radio" value="5" name="cap_color">Màu xanh lá</label>
+                                <label class="radio-inline"><input type="radio" value="6" name="cap_color">Màu hồng</label>
+                                <label class="radio-inline"><input type="radio" value="7" name="cap_color">Màu tím</label>
+                                <label class="radio-inline"><input type="radio" value="8" name="cap_color">Màu đỏ</label>
+                                <label class="radio-inline"><input type="radio" value="9" name="cap_color">Màu trắng</label>
+                                <label class="radio-inline"><input type="radio" value="10" name="cap_color">Màu vàng</label>
                             </div>
                             <div class="attribute">
-                                <h3 >5. odor</h3>
-                                <label class="radio-inline"><input type="radio" value="1" name="odor">almond</label>
-                                <label class="radio-inline"><input type="radio" value="2" name="odor">anise</label>
-                                <label class="radio-inline"><input type="radio" value="3" name="odor">fishy</label>
-                                <label class="radio-inline"><input type="radio" value="4" name="odor">foul</label>
-                                <label class="radio-inline"><input type="radio" value="5" name="odor">musty</label>
-                                <label class="radio-inline"><input type="radio" value="6" name="odor">none</label>
-                                <label class="radio-inline"><input type="radio" value="7" name="odor">pungent</label>
-                                <label class="radio-inline"><input type="radio" value="8" name="odor">spicy</label>
+                                <h3>4. Có vết bầm tím không?</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="bruises">Có vết bầm tím</label>
+                                <label class="radio-inline"><input type="radio" value="0" name="bruises">Không</label>
                             </div>
                             <div class="attribute">
-                                <h3 >6. gill-attachment</h3>
-                                <label class="radio-inline"><input type="radio" value="1" name="gill_attachment">attached</label>
-                                <label class="radio-inline"><input type="radio" value="2" name="gill_attachment">descending</label>
-                                <label class="radio-inline"><input type="radio" value="3" name="gill_attachment">free</label>
-                                <label class="radio-inline"><input type="radio" value="4" name="gill_attachment">notched</label>
-                            </div>   
-                            <div class="attribute">
-                                <h3>7. gill-spacing</h3>
-                                <label class="radio-inline"><input type="radio" value="1" name="gill_spacing">close</label>
-                                <label class="radio-inline"><input type="radio" value="2" name="gill_spacing">crowded</label>
-                                <label class="radio-inline"><input type="radio" value="3" name="gill_spacing">distant</label>
+                                <h3 >5.	Nấm có mùi gì?</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="odor">Mùi hạnh nhân</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="odor">Mùi cây hồi</label>
+                                <label class="radio-inline"><input type="radio" value="3" name="odor">Mùi tanh</label>
+                                <label class="radio-inline"><input type="radio" value="4" name="odor">Mùi hôi</label>
+                                <label class="radio-inline"><input type="radio" value="5" name="odor">Mùi mốc</label>
+                                <label class="radio-inline"><input type="radio" value="6" name="odor">Không mùi</label>
+                                <label class="radio-inline"><input type="radio" value="7" name="odor">Mùi hăng</label>
+                                <label class="radio-inline"><input type="radio" value="8" name="odor">Mùi thơm</label>
                             </div>
                             <div class="attribute">
-                                <h3 >8. gill-size</h3>
-                                <label class="radio-inline"><input type="radio" value="1" name="gill_size">broad</label>
-                                <label class="radio-inline"><input type="radio" value="2" name="gill_size">narrow</label>
-                            </div>
-                        </div>   
-                        <div class="col-lg-4">                        
-                            <div class="attribute">
-                                <h3 >9. gill-color</h3>
-                                <label class="radio-inline"><input type="radio" value="1" name="gill_color">black</label>
-                                <label class="radio-inline"><input type="radio" value="2" name="gill_color">brown</label>
-                                <label class="radio-inline"><input type="radio" value="3" name="gill_color">buff</label>
-                                <label class="radio-inline"><input type="radio" value="4" name="gill_color">chocolate</label>
-                                <label class="radio-inline"><input type="radio" value="5" name="gill_color">gray</label>
-                                <label class="radio-inline"><input type="radio" value="6" name="gill_color">green</label>
-                                <label class="radio-inline"><input type="radio" value="7" name="gill_color">orange</label>
-                                <label class="radio-inline"><input type="radio" value="8" name="gill_color">pink</label>
-                                <label class="radio-inline"><input type="radio" value="9" name="gill_color">purple</label>
-                                <label class="radio-inline"><input type="radio" value="10" name="gill_color">red</label>
-                                <label class="radio-inline"><input type="radio" value="11" name="gill_color">white</label>
-                                <label class="radio-inline"><input type="radio" value="12" name="gill_color">yellow</label>
-                            </div>   
-                            <div class="attribute">
-                                <h3 >10. stalk-shape</h3>
-                                <label class="radio-inline"><input type="radio" value="1" name="stalk_shape">enlarging</label>
-                                <label class="radio-inline"><input type="radio" value="2" name="stalk_shape">tapering</label>
-                            </div> 
-                            <div class="attribute">
-                                <h3 >11. stalk-root</h3>
-                                <label class="radio-inline"><input type="radio" value="1" name="stalk_root">bulbous</label>
-                                <label class="radio-inline"><input type="radio" value="2" name="stalk_root">club</label>
-                                <label class="radio-inline"><input type="radio" value="3" name="stalk_root">cup</label>
-                                <label class="radio-inline"><input type="radio" value="4" name="stalk_root">equal</label>
-                                <label class="radio-inline"><input type="radio" value="5" name="stalk_root">rhizomorphs</label>
-                                <label class="radio-inline"><input type="radio" value="6" name="stalk_root">rooted</label>
-                                <label class="radio-inline"><input type="radio" value="7" name="stalk_root">missing?</label>
-                            </div> 
-                            <div class="attribute">
-                                <h3>12. stalk-surface-above-ring</h3>
-                                <label class="radio-inline"><input type="radio" value="1" name="stalk_surface_above_ring">fibrous</label>
-                                <label class="radio-inline"><input type="radio" value="2" name="stalk_surface_above_ring">scaly</label>
-                                <label class="radio-inline"><input type="radio" value="3" name="stalk_surface_above_ring">silky</label>
-                                <label class="radio-inline"><input type="radio" value="4" name="stalk_surface_above_ring">smooth</label>
+                                <h3 >6.	Mang nấm như thế nào?</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="gill_attachment">Gắn bó (Chắc chắn)</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="gill_attachment">Úp xuống</label>
+                                <label class="radio-inline"><input type="radio" value="3" name="gill_attachment">Lỏng lẻo (Dễ bị rụng ra)</label>
+                                <label class="radio-inline"><input type="radio" value="4" name="gill_attachment">Từng khấc, khía</label>
                             </div>
                             <div class="attribute">
-                                <h3 >13. stalk-surface-below-ring</h3>
-                                <label class="radio-inline"><input type="radio" value="1" name="stalk_surface_below_ring">fibrous</label>
-                                <label class="radio-inline"><input type="radio" value="2" name="stalk_surface_below_ring">scaly</label>
-                                <label class="radio-inline"><input type="radio" value="3" name="stalk_surface_below_ring">silky</label>
-                                <label class="radio-inline"><input type="radio" value="4" name="stalk_surface_below_ring">smooth</label>
+                                <h3>7. Khoảng cách mang thế nào?</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="gill_spacing">Gần</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="gill_spacing">Đông đúc</label>
+                                <label class="radio-inline"><input type="radio" value="3" name="gill_spacing">Xa</label>
                             </div>
                             <div class="attribute">
-                                <h3 >14. stalk-color-above-ring</h3>
-                                <label class="radio-inline"><input type="radio" value="1" name="stalk_color_above_ring">brown</label>
-                                <label class="radio-inline"><input type="radio" value="2" name="stalk_color_above_ring">buff</label>
-                                <label class="radio-inline"><input type="radio" value="3" name="stalk_color_above_ring">cinnamon</label>
-                                <label class="radio-inline"><input type="radio" value="4" name="stalk_color_above_ring">gray</label>
-                                <label class="radio-inline"><input type="radio" value="5" name="stalk_color_above_ring">orange</label>
-                                <label class="radio-inline"><input type="radio" value="6" name="stalk_color_above_ring">pink</label>
-                                <label class="radio-inline"><input type="radio" value="7" name="stalk_color_above_ring">red</label>
-                                <label class="radio-inline"><input type="radio" value="8" name="stalk_color_above_ring">white</label>
-                                <label class="radio-inline"><input type="radio" value="9" name="stalk_color_above_ring">yellow</label>
-                            </div>  
+                                <h3 >8.	Kích thước mang như thế nào?</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="gill_size">Rộng</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="gill_size">Hẹp</label>
+                            </div>
                             <div class="attribute">
-                                <h3 >15. stalk-color-below-ring</h3>
-                                <label class="radio-inline"><input type="radio" value="1" name="stalk_color_below_ring">brown</label>
-                                <label class="radio-inline"><input type="radio" value="2" name="stalk_color_below_ring">buff</label>
-                                <label class="radio-inline"><input type="radio" value="3" name="stalk_color_below_ring">cinnamon</label>
-                                <label class="radio-inline"><input type="radio" value="4" name="stalk_color_below_ring">gray</label>
-                                <label class="radio-inline"><input type="radio" value="5" name="stalk_color_below_ring">orange</label>
-                                <label class="radio-inline"><input type="radio" value="6" name="stalk_color_below_ring">pink</label>
-                                <label class="radio-inline"><input type="radio" value="7" name="stalk_color_below_ring">red</label>
-                                <label class="radio-inline"><input type="radio" value="8" name="stalk_color_below_ring">white</label>
-                                <label class="radio-inline"><input type="radio" value="9" name="stalk_color_below_ring">yellow</label>
-                            </div>  
-                        </div>   
-                        <div class="col-lg-4"> 
+                                <h3 >9.	Mang nấm có màu gì?</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="gill_color">Màu đen</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="gill_color">Màu nâu</label>
+                                <label class="radio-inline"><input type="radio" value="3" name="gill_color">Màu cát cháy</label>
+                                <label class="radio-inline"><input type="radio" value="4" name="gill_color">Màu socola</label>
+                                <label class="radio-inline"><input type="radio" value="5" name="gill_color">Màu xám</label>
+                                <label class="radio-inline"><input type="radio" value="6" name="gill_color">Màu xanh lá</label>
+                                <label class="radio-inline"><input type="radio" value="7" name="gill_color">Màu cam</label>
+                                <label class="radio-inline"><input type="radio" value="8" name="gill_color">Màu hồng</label>
+                                <label class="radio-inline"><input type="radio" value="9" name="gill_color">Màu tím</label>
+                                <label class="radio-inline"><input type="radio" value="10" name="gill_color">Màu đỏ</label>
+                                <label class="radio-inline"><input type="radio" value="11" name="gill_color">Màu trắng</label>
+                                <label class="radio-inline"><input type="radio" value="12" name="gill_color">Màu vàng</label>
+                            </div>
                             <div class="attribute">
-                                <h3 >16. veil-type</h3>
-                                <label class="radio-inline"><input type="radio" value="1" name="veil_type">partial</label>
-                                <label class="radio-inline"><input type="radio" value="2" name="veil_type">universal</label>
-                            </div>   
+                                <h3 >10. Hình dạng thân nấm như thế nào?</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="stalk_shape">To lớn</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="stalk_shape">Thon gọn</label>
+                            </div>
                             <div class="attribute">
-                                <h3 >17. veil-color</h3>
-                                <label class="radio-inline"><input type="radio" value="1" name="veil_color">brown</label>
-                                <label class="radio-inline"><input type="radio" value="5" name="veil_color">orange</label>
-                                <label class="radio-inline"><input type="radio" value="8" name="veil_color">white</label>
-                                <label class="radio-inline"><input type="radio" value="9" name="veil_color">yellow</label>
-                            </div> 
+                                <h3 >11. Cuống rễ nấm có hình gì?</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="stalk_root">Hình củ</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="stalk_root">Hình chùm</label>
+                                <label class="radio-inline"><input type="radio" value="3" name="stalk_root">Hình cốc</label>
+                                <label class="radio-inline"><input type="radio" value="4" name="stalk_root">Hình đều nhau</label>
+                                <label class="radio-inline"><input type="radio" value="5" name="stalk_root">Hình thân rễ</label>
+                                <label class="radio-inline"><input type="radio" value="6" name="stalk_root">Hình bền chặt</label>
+                                <label class="radio-inline"><input type="radio" value="7" name="stalk_root">Còn thiếu?</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
                             <div class="attribute">
-                                <h3 >18. ring-number</h3>
-                                <label class="radio-inline"><input type="radio" value="1" name="ring-number">none</label>
-                                <label class="radio-inline"><input type="radio" value="2" name="ring-number">one</label>
-                                <label class="radio-inline"><input type="radio" value="3" name="ring-number">two</label>
-                            </div> 
+                                <h3>12. Cuống trên bề mặt trên vòng nấm có dạng?</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="stalk_surface_above_ring">Xơ</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="stalk_surface_above_ring">Có vảy</label>
+                                <label class="radio-inline"><input type="radio" value="3" name="stalk_surface_above_ring">Mướt</label>
+                                <label class="radio-inline"><input type="radio" value="4" name="stalk_surface_above_ring">Bóng</label>
+                            </div>
                             <div class="attribute">
-                                <h3 >19. ring-type</h3>
-                                <label class="radio-inline"><input type="radio" value="1" name="ring-type">cobwebby</label>
-                                <label class="radio-inline"><input type="radio" value="2" name="ring-type">evanescent</label>
-                                <label class="radio-inline"><input type="radio" value="3" name="ring-type">flaring</label>
-                                <label class="radio-inline"><input type="radio" value="4" name="ring-type">large</label>
-                                <label class="radio-inline"><input type="radio" value="5" name="ring-type">none</label>
-                                <label class="radio-inline"><input type="radio" value="6" name="ring-type">pendant</label>
-                                <label class="radio-inline"><input type="radio" value="7" name="ring-type">sheathing</label>
-                                <label class="radio-inline"><input type="radio" value="8" name="ring-type">zone</label>
-                            </div> 
+                                <h3 >13. Cuống dưới bề mặt vòng nấm?</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="stalk_surface_below_ring">Xơ</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="stalk_surface_below_ring">Có vảy</label>
+                                <label class="radio-inline"><input type="radio" value="3" name="stalk_surface_below_ring">Mướt</label>
+                                <label class="radio-inline"><input type="radio" value="4" name="stalk_surface_below_ring">Bóng</label>
+                            </div>
                             <div class="attribute">
-                                <h3 >20. spore-print-color</h3>
-                                <label class="radio-inline"><input type="radio" value="1" name="spore-print-color">black</label>
-                                <label class="radio-inline"><input type="radio" value="2" name="spore-print-color">brown</label>
-                                <label class="radio-inline"><input type="radio" value="3" name="spore-print-color">buff</label>
-                                <label class="radio-inline"><input type="radio" value="4" name="spore-print-color">chocolate</label>
-                                <label class="radio-inline"><input type="radio" value="5" name="spore-print-color">green</label>
-                                <label class="radio-inline"><input type="radio" value="6" name="spore-print-color">orange</label>
-                                <label class="radio-inline"><input type="radio" value="7" name="spore-print-color">purple</label>
-                                <label class="radio-inline"><input type="radio" value="8" name="spore-print-color">white</label>
-                                <label class="radio-inline"><input type="radio" value="6" name="spore-print-color">yellow</label>                           
-                            </div> 
+                                <h3 >14. Cuống trên vòng nấm có màu?</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="stalk_color_above_ring">Màu nâu</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="stalk_color_above_ring">Màu cát cháy</label>
+                                <label class="radio-inline"><input type="radio" value="3" name="stalk_color_above_ring">Màu quế</label>
+                                <label class="radio-inline"><input type="radio" value="4" name="stalk_color_above_ring">Màu xám</label>
+                                <label class="radio-inline"><input type="radio" value="5" name="stalk_color_above_ring">Màu cam</label>
+                                <label class="radio-inline"><input type="radio" value="6" name="stalk_color_above_ring">Màu hồng</label>
+                                <label class="radio-inline"><input type="radio" value="7" name="stalk_color_above_ring">Màu đỏ</label>
+                                <label class="radio-inline"><input type="radio" value="8" name="stalk_color_above_ring">Màu trắng</label>
+                                <label class="radio-inline"><input type="radio" value="9" name="stalk_color_above_ring">Màu vàng</label>
+                            </div>
                             <div class="attribute">
-                                <h3 >21. population</h3>
-                                <label class="radio-inline"><input type="radio" value="1" name="population">abundant</label>
-                                <label class="radio-inline"><input type="radio" value="2" name="population">clustered</label>
-                                <label class="radio-inline"><input type="radio" value="3" name="population">numerous</label>
-                                <label class="radio-inline"><input type="radio" value="4" name="population">scattered</label>
-                                <label class="radio-inline"><input type="radio" value="5" name="population">several</label>
-                                <label class="radio-inline"><input type="radio" value="6" name="population">solitary</label>
-                            </div> 
+                                <h3 >15. Cuống dưới vòng nấm có màu? </h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="stalk_color_below_ring">Màu nâu</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="stalk_color_below_ring">Màu cát cháy</label>
+                                <label class="radio-inline"><input type="radio" value="3" name="stalk_color_below_ring">Màu quế</label>
+                                <label class="radio-inline"><input type="radio" value="4" name="stalk_color_below_ring">Màu xám</label>
+                                <label class="radio-inline"><input type="radio" value="5" name="stalk_color_below_ring">Màu cam</label>
+                                <label class="radio-inline"><input type="radio" value="6" name="stalk_color_below_ring">Màu hồng</label>
+                                <label class="radio-inline"><input type="radio" value="7" name="stalk_color_below_ring">Màu đỏ</label>
+                                <label class="radio-inline"><input type="radio" value="8" name="stalk_color_below_ring">Màu trắng</label>
+                                <label class="radio-inline"><input type="radio" value="9" name="stalk_color_below_ring">Màu vàng</label>
+                            </div>
                             <div class="attribute">
-                                <h3 >22. habitat</h3>
-                                <label class="radio-inline"><input type="radio" value="1" name="habitat">grasses</label>
-                                <label class="radio-inline"><input type="radio" value="2" name="habitat">leaves</label>
-                                <label class="radio-inline"><input type="radio" value="3" name="habitat">meadows</label>
-                                <label class="radio-inline"><input type="radio" value="4" name="habitat">paths</label>
-                                <label class="radio-inline"><input type="radio" value="5" name="habitat">urban</label>
-                                <label class="radio-inline"><input type="radio" value="6" name="habitat">waste</label>
-                                <label class="radio-inline"><input type="radio" value="7" name="habitat">woods</label>
-                            </div> 
-                        </div>                   
+                                <h3 >16. Loại màng che mang nấm?</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="veil_type">Che một phần</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="veil_type">Che tất cả</label>
+                            </div>
+                            <div class="attribute">
+                                <h3 >17. Màu của màng che mặt nấm?</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="veil_color">Màu nâu</label>
+                                <label class="radio-inline"><input type="radio" value="5" name="veil_color">Màu cam</label>
+                                <label class="radio-inline"><input type="radio" value="8" name="veil_color">Màu trắng</label>
+                                <label class="radio-inline"><input type="radio" value="9" name="veil_color">Màu vàng</label>
+                            </div>
+                            <div class="attribute">
+                                <h3 >18. Số vòng nấm?</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="ring-number">Không có</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="ring-number">Một vòng</label>
+                                <label class="radio-inline"><input type="radio" value="3" name="ring-number">Hai vòng</label>
+                            </div>
+                            <div class="attribute">
+                                <h3 >19. Kiểu vòng nấm?</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="ring-type">Mạng lưới</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="ring-type">Tiêu biến</label>
+                                <label class="radio-inline"><input type="radio" value="3" name="ring-type">Rực rỡ</label>
+                                <label class="radio-inline"><input type="radio" value="4" name="ring-type">Lớn</label>
+                                <label class="radio-inline"><input type="radio" value="5" name="ring-type">Không có</label>
+                                <label class="radio-inline"><input type="radio" value="6" name="ring-type">Trang sức</label>
+                                <label class="radio-inline"><input type="radio" value="7" name="ring-type"> Kiểu vỏ bọc</label>
+                                <label class="radio-inline"><input type="radio" value="8" name="ring-type">Kiểu vùng</label>
+                            </div>
+                            <div class="attribute">
+                                <h3 >20. Bào tử in màu nấm?</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="spore-print-color">Màu đen</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="spore-print-color">Màu nâu</label>
+                                <label class="radio-inline"><input type="radio" value="3" name="spore-print-color">Màu cát cháy</label>
+                                <label class="radio-inline"><input type="radio" value="4" name="spore-print-color">Màu Socola</label>
+                                <label class="radio-inline"><input type="radio" value="5" name="spore-print-color">Màu xanh lá</label>
+                                <label class="radio-inline"><input type="radio" value="6" name="spore-print-color">Màu vàng</label>
+                                <label class="radio-inline"><input type="radio" value="7" name="spore-print-color">Màu tím</label>
+                                <label class="radio-inline"><input type="radio" value="8" name="spore-print-color">Màu trắng</label>
+                                <label class="radio-inline"><input type="radio" value="6" name="spore-print-color">Màu vàng</label>
+                            </div>
+                            <div class="attribute">
+                                <h3 >21. Sự trú ngụ của nấm?</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="population">Phong phú</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="population">Thành cụm</label>
+                                <label class="radio-inline"><input type="radio" value="3" name="population">Nhiều</label>
+                                <label class="radio-inline"><input type="radio" value="4" name="population">Rải rác</label>
+                                <label class="radio-inline"><input type="radio" value="5" name="population">Một số</label>
+                                <label class="radio-inline"><input type="radio" value="6" name="population">Đơn độc</label>
+                            </div>
+                            <div class="attribute">
+                                <h3 >22. Môi trường sống của nấm?</h3>
+                                <label class="radio-inline"><input type="radio" value="1" name="habitat">Cỏ</label>
+                                <label class="radio-inline"><input type="radio" value="2" name="habitat">Lá</label>
+                                <label class="radio-inline"><input type="radio" value="3" name="habitat"> Đồng cỏ</label>
+                                <label class="radio-inline"><input type="radio" value="4" name="habitat"> Đường dẫn (paths)</label>
+                                <label class="radio-inline"><input type="radio" value="5" name="habitat">Thành thị</label>
+                                <label class="radio-inline"><input type="radio" value="6" name="habitat">Chất thải</label>
+                                <label class="radio-inline"><input type="radio" value="7" name="habitat">Gỗ</label>
+                            </div>
+                        </div>
                     </div>
                     <br>
                     <div class="form-group row ">
                         <div class="col-md-4 col-md-offset-3">
                           <select id="algorithms" name="algorithms" class="form-control">
-                            <option value="svm" selected>SVM Algorithms</option>
-                            <option value="lr" selected>Logistic Regression Algorithms</option>
-                            <option value="nn" selected>Neural Network Algorithms</option>
+                            <option value="0" selected>---Chọn thuật toán---</option>
+                            <option value="svm">SVM Algorithms</option>
+                            <option value="lr">Logistic Regression Algorithms</option>
+                            <option value="nn">Neural Network Algorithms</option>
                           </select>
                         </div>
-                        <label id="submit" onclick="check_input()" class="col-sm-2 btn btn-primary">Submit</label>
+                        <label id="submit" onclick="check_input()" class="col-sm-2 btn btn-primary">Phân loại</label>
                     </div>
                 </form>
             </div>
         </div>
     </div>
     <footer class="text-center">
-        <p> Copyright@NPT 2018</p>
+        <p> Copyright@VNUA 2019</p>
     </footer>
     <script>
         function check_input() {
-            if ($('#formdata input:radio:checked').length == 22){
+            if ($('#formdata input:radio:checked').length == 22 && $('select[name=algorithms]').val() != 0){
                 $('#formdata').submit()
             } else {
-                alert('Please select all field!');
+                alert('Chưa chọn hết thuộc tính hoặc chưa chọn thuật thoán!');
                 return false;
             }
         };
