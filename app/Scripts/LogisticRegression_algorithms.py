@@ -1,14 +1,12 @@
-from sklearn import svm
+from sklearn.linear_model import LogisticRegression
 from app.Scripts.helper import *
 import os
 from PhanLoaiNam.settings import PROJECT_ROOT
 
-def svm_algorithm(input):
-    file = os.path.join(PROJECT_ROOT,  "app\\Scripts\\agaricus-lepiota.data.txt")
+
+def lr_algorithms(input):
+    file = os.path.join(PROJECT_ROOT, "app\\Scripts\\agaricus-lepiota.data.txt")
     data_frame = clean_data(file)
-    X_train, Y_train, X_test, Y_test = X_train_Y_train_X_test_Y_test(data_frame)
-    clf = svm.SVC()
-    clf.fit(X_train, Y_train)
     x_test = pd.DataFrame([input],
                           columns=['cap-shape', 'cap-surface', 'cap-color', 'bruises', 'odor',
                                    'gill-attachment',
@@ -18,6 +16,13 @@ def svm_algorithm(input):
                                    'stalk-color-above-ring', 'stalk-color-below-ring', 'veil-type',
                                    'veil-color', 'ring-number', 'ring-type',
                                    'spore-print-color', 'population', 'habitat'], dtype=int)
-    output = clf.predict(x_test)
-    precision = clf.score(X_test, Y_test)
+
+    X_train, Y_train, X_test, Y_test = X_train_Y_train_X_test_Y_test(data_frame)
+
+    # call model and fit model and training data
+    clf_lr = LogisticRegression().fit(X_train, Y_train)
+    # predict test data
+    output = clf_lr.predict(x_test)
+    precision = clf_lr.score(X_test, Y_test)
+
     return output, precision

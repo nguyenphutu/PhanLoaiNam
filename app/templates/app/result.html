@@ -26,9 +26,9 @@
 <body>
     <div class="result text-center">
         {% if result == -1 %}
-            <h1 class="text bg-success">Nấm không độc</h1>
+            <h1 class="text bg-success">Nấm không độc {{ precision  }}%</h1>
         {% else %}
-            <h1 class="text bg-danger">Nấm độc</h1>
+            <h1 class="text bg-danger">Nấm độc {{ precision  }}%</h1>
         {% endif %}
     </div>
 </body>

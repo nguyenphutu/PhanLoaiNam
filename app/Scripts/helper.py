@@ -84,3 +84,13 @@ def x_train_y_train(data_frame):
     x_train = train_data.drop('classes', 1).values
     y_train = train_data['classes'].values
     return x_train, y_train
+
+
+def X_train_Y_train_X_test_Y_test(data_frame):
+    train_data = data_frame[:6001].astype(int)
+    test_data = data_frame[6001:len(data_frame) - 1].astype(int)
+    X_train = train_data.drop('classes', 1).values
+    Y_train = train_data['classes'].values
+    X_test = test_data.drop('classes', 1).values
+    Y_test = test_data['classes'].values
+    return X_train, Y_train, X_test, Y_test
