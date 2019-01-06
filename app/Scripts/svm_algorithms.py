@@ -2,13 +2,25 @@ from sklearn import svm
 from app.Scripts.helper import *
 import os
 from PhanLoaiNam.settings import PROJECT_ROOT
+import pickle
+from sklearn.externals import joblib
 
 def svm_algorithm(input):
-    file = os.path.join(PROJECT_ROOT,  "app\\Scripts\\agaricus-lepiota.data.txt")
+    # Load X_train, Y_train, X_test, Y_test from sample data
+    file = os.path.join(PROJECT_ROOT, "app\\Scripts\\agaricus-lepiota.data.txt")
     data_frame = clean_data(file)
     X_train, Y_train, X_test, Y_test = X_train_Y_train_X_test_Y_test(data_frame)
-    clf = svm.SVC()
-    clf.fit(X_train, Y_train)
+
+    # Get model
+    file_model = os.path.join(PROJECT_ROOT, "app\\Scripts\\model\\svm_model.sav")
+    exist_model = os.path.isfile(os.path.join(PROJECT_ROOT,  "app\\Scripts\\model\\svm_model.sav"))
+    if exist_model:
+        clf = joblib.load(file_model)
+    else:
+        clf = svm.SVC()
+        clf.fit(X_train, Y_train)
+        pickle.dump(clf, open(file_model, 'wb'))
+
     x_test = pd.DataFrame([input],
                           columns=['cap-shape', 'cap-surface', 'cap-color', 'bruises', 'odor',
                                    'gill-attachment',

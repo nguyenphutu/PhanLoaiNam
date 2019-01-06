@@ -2,6 +2,8 @@ from sklearn.neural_network import MLPClassifier
 from app.Scripts.helper import *
 import os
 from PhanLoaiNam.settings import PROJECT_ROOT
+import pickle
+from sklearn.externals import joblib
 
 
 def nn_algorithms(input):
@@ -19,11 +21,18 @@ def nn_algorithms(input):
                                    'veil-color', 'ring-number', 'ring-type',
                                    'spore-print-color', 'population', 'habitat'], dtype=int)
 
-    # call model and fit model and training data
-    clf_ann = MLPClassifier().fit(X_train, Y_train)
+    # Get model
+    file_model = os.path.join(PROJECT_ROOT, "app\\Scripts\\model\\nn_model.sav")
+    exist_model = os.path.isfile(os.path.join(PROJECT_ROOT, "app\\Scripts\\model\\nn_model.sav"))
+    if exist_model:
+        clf = joblib.load(file_model)
+    else:
+        # call model and fit model and training data
+        clf = MLPClassifier().fit(X_train, Y_train)
+        pickle.dump(clf, open(file_model, 'wb'))
 
     # predict test data
-    output = clf_ann.predict(x_test)
-    precision = clf_ann.score(X_test, Y_test)
+    output = clf.predict(x_test)
+    precision = clf.score(X_test, Y_test)
 
     return output, precision

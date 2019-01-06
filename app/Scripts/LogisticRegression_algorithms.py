@@ -2,6 +2,8 @@ from sklearn.linear_model import LogisticRegression
 from app.Scripts.helper import *
 import os
 from PhanLoaiNam.settings import PROJECT_ROOT
+import pickle
+from sklearn.externals import joblib
 
 
 def lr_algorithms(input):
@@ -19,10 +21,18 @@ def lr_algorithms(input):
 
     X_train, Y_train, X_test, Y_test = X_train_Y_train_X_test_Y_test(data_frame)
 
-    # call model and fit model and training data
-    clf_lr = LogisticRegression().fit(X_train, Y_train)
+    # Get model
+    file_model = os.path.join(PROJECT_ROOT, "app\\Scripts\\model\\lr_model.sav")
+    exist_model = os.path.isfile(os.path.join(PROJECT_ROOT, "app\\Scripts\\model\\lr_model.sav"))
+    if exist_model:
+        clf = joblib.load(file_model)
+    else:
+        # call model and fit model and training data
+        clf = LogisticRegression().fit(X_train, Y_train)
+        pickle.dump(clf, open(file_model, 'wb'))
+        
     # predict test data
-    output = clf_lr.predict(x_test)
-    precision = clf_lr.score(X_test, Y_test)
+    output = clf.predict(x_test)
+    precision = clf.score(X_test, Y_test)
 
     return output, precision
